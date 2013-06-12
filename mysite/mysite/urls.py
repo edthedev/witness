@@ -10,8 +10,9 @@ from witness.models import Submission
 
 urlpatterns = patterns('',
     url(r'^(?P<slug>[-_\w]+)/$', SubmissionDetail.as_view(), name='submission-detail'),
-    url(r'', SubmissionList.as_view(), name='submission-list'), 
     url(r'new', SubmissionCreate.as_view(), name='submission-create'), 
+    url(r'', SubmissionList.as_view(), name='submission-list'), 
+#     url(r'', , name='submission-list'), 
 
     # Examples:
     # url(r'^$', 'mysite.views.home', name='home'),
